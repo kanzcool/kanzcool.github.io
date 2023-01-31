@@ -1,0 +1,93 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Kong12384abc 
+sachinprajapati8604
+/
+Alarm-Clock
+Public
+Fork your own copy of sachinprajapati8604/Alarm-Clock
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Alarm-Clock/style.css
+@sachinprajapati8604
+sachinprajapati8604 First Commit
+Latest commit afec8e6 on Nov 1, 2021
+ History
+ 1 contributor
+50 lines (44 sloc)  815 Bytes
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #12181b;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock {
+  font-family: "Orbitron", sans-serif;
+  font-size: 15vw;
+  background-image: linear-gradient( 180deg, #70F570 10%, #49C628 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.controls {
+  margin-top: 16px;
+}
+
+.button {
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.set-alarm {
+  background-color: #498afb;
+}
+
+.clear-alarm {
+  background-color: #ff3860;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(82, 76, 76);
+  color: white;
+  text-align: center;
+}
+
+center {
+  text-align: center;
+}
