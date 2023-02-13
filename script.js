@@ -1,4 +1,8 @@
+//ไฟล์ระบบ
+
+//สร้างนาฬิกา
 const liveTime = document.getElementById('clock');
+//เสียงงนาฬิกา
 const audio = new Audio('alarm.mp3');
 audio.loop = true;
 
@@ -6,17 +10,20 @@ let alarmTime = null;
 let alarmTimeout = null;
 let alertdiv=document.getElementById('alarm-box');
 
-function updateLiveTime() {
-    const date = new Date();
-    const hour = addZero(date.getHours());
-    const minute = addZero(date.getMinutes());
-    const second = addZero(date.getSeconds());
 
-    liveTime.innerText = `${hour}:${minute}:${second}`;
+//ฟังชั่นอัพเเดตเวลา
+function updateLiveTime() {
+    const date = new Date(); //วัน
+    const hour = addZero(date.getHours()); //ชั่วโมง
+    const minute = addZero(date.getMinutes()); //นาที
+    const second = addZero(date.getSeconds()); //วินาที
+
+    liveTime.innerText = `${hour}:${minute}:${second}`; //เอา ชั่วโฒง นาที วิทนาทีมารวมกันเป็นเวลา
 }
 
 setInterval(updateLiveTime, 1000);
 
+//เพิ่มเวลา
 function addZero(time) {
     if (time < 10) {
         return '0' + time;
@@ -24,10 +31,12 @@ function addZero(time) {
     return time;
 }
 
+//ตั้งเวลา
 function setAlarmTime(value) {
     alarmTime = value;
 }
 
+//ฟังชั่นตั้งปลก
 function setAlarm() {
     if(alarmTime) {
         const current = new Date();
@@ -46,6 +55,7 @@ function setAlarm() {
     }
 }
 
+//ฟังชั่นลบการปลูก
 function clearAlarm() {
     audio.pause();
     if (alarmTimeout) {
